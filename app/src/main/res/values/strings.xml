@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TBC_Course_6</string>
+    <string name="git_link">\@iTarley</string>
+    <string name="my_name">Luka Nikuradze</string>
+    <string name="log_in">Log In</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="username">Username</string>
+    <string name="terms_of_service">By signing up, you agree to Photo’s <u>Terms of Service</u> and <u>Privacy Policy</u>.</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="logo">logo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="enter_correct_password">Please enter your password</string>
+    <string name="enter_your_email">Enter your email address</string>
+    <string name="enter_your_username">Please Enter your username</string>
+    <string name="success">Success</string>
+    <string name="failed_sign_up">This email is already registered</string>
+    <string name="not_match">Email and Password do not match to registered account</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_uid">Your UID:</string>
+    <string name="uid">UID</string>
+    <string name="welcome">Welcome</string>
+    <string name="sure">Are you sure ?</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+</resources>

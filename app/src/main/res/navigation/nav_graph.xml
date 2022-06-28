@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loggedOutFragment">
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.tbc_course_6.authorizationFragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_registerEndFragment"
+            app:destination="@id/registerEndFragment"
+            app:enterAnim="@anim/from_left_to_right"
+            app:popEnterAnim="@anim/from_right_to_left" />
+        <action
+            android:id="@+id/action_registerFragment_to_loggedOutFragment"
+            app:destination="@id/loggedOutFragment"
+            app:enterAnim="@anim/from_top"
+            app:popEnterAnim="@anim/from_bottom"
+            app:popUpTo="@id/loggedOutFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tbc_course_6.authorizationFragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_loggedOutFragment"
+            app:destination="@id/loggedOutFragment"
+            app:enterAnim="@anim/from_top"
+            app:popUpTo="@id/loggedOutFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_activeFragment"
+            app:destination="@id/activeFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:popEnterAnim="@anim/from_top"
+            app:popUpTo="@id/loggedOutFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerEndFragment"
+        android:name="com.example.tbc_course_6.authorizationFragment.RegisterEndFragment"
+        android:label="fragment_register_end"
+        tools:layout="@layout/fragment_register_end" >
+        <action
+            android:id="@+id/action_registerEndFragment_to_loggedOutFragment"
+            app:destination="@id/loggedOutFragment"
+            app:popUpTo="@id/loggedOutFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_registerEndFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_right_to_left"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerEndFragment_to_activeFragment"
+            app:destination="@id/activeFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:popEnterAnim="@anim/from_top"
+            app:popUpTo="@id/loggedOutFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loggedOutFragment"
+        android:name="com.example.tbc_course_6.authorizationFragment.LoggedOutFragment"
+        android:label="fragment_logged_out"
+        tools:layout="@layout/fragment_logged_out" >
+        <action
+            android:id="@+id/action_loggedOutFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:popEnterAnim="@anim/from_top" />
+        <action
+            android:id="@+id/action_loggedOutFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:popEnterAnim="@anim/from_top" />
+        <action
+            android:id="@+id/action_loggedOutFragment_to_activeFragment"
+            app:destination="@id/activeFragment"
+            app:popUpTo="@id/activeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/activeFragment"
+        android:name="com.example.tbc_course_6.authorizationFragment.ActiveFragment"
+        android:label="fragment_active"
+        tools:layout="@layout/fragment_active" />
+</navigation>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.tbc_course_6.R
 import com.example.tbc_course_6.databinding.FragmentLoggedOutBinding
@@ -33,13 +34,10 @@ class LoginFragment : Fragment() {
             login()
         }
         binding.backBtn.setOnClickListener {
-            back()
+            Navigation.findNavController(it).popBackStack()
         }
     }
 
-    private fun back() {
-        findNavController().navigate(R.id.action_loginFragment_to_loggedOutFragment)
-    }
 
     private fun login() {
         val email = binding.emailLoginEditText.text.toString()

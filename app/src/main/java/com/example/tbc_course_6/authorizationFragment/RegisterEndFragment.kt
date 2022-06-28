@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.tbc_course_6.R
 import com.example.tbc_course_6.databinding.FragmentRegisterEndBinding
@@ -48,15 +49,12 @@ class RegisterEndFragment : Fragment() {
             checker()
         }
         binding.backBtn.setOnClickListener {
-            back()
+            Navigation.findNavController(it).popBackStack()
         }
 
 
     }
 
-    private fun back(){
-        findNavController().navigate(R.id.action_registerEndFragment_to_registerFragment)
-    }
 
     private fun checker() {
         email = RegisterEndFragmentArgs.fromBundle(requireArguments()).email

@@ -34,14 +34,11 @@ class RegisterFragment : Fragment() {
         }
 
         binding.backBtn.setOnClickListener {
-            back()
+            Navigation.findNavController(it).popBackStack()
         }
 
     }
 
-    private fun back(){
-        findNavController().navigate(R.id.action_registerFragment_to_loggedOutFragment)
-    }
 
     private fun registration() {
         when {

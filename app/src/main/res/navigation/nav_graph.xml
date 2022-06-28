@@ -14,13 +14,6 @@
             app:destination="@id/registerEndFragment"
             app:enterAnim="@anim/from_left_to_right"
             app:popEnterAnim="@anim/from_right_to_left" />
-        <action
-            android:id="@+id/action_registerFragment_to_loggedOutFragment"
-            app:destination="@id/loggedOutFragment"
-            app:enterAnim="@anim/from_top"
-            app:popEnterAnim="@anim/from_bottom"
-            app:popUpTo="@id/loggedOutFragment"
-            app:popUpToInclusive="true" />
 
     </fragment>
     <fragment
@@ -28,12 +21,6 @@
         android:name="com.example.tbc_course_6.authorizationFragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_loggedOutFragment"
-            app:destination="@id/loggedOutFragment"
-            app:enterAnim="@anim/from_top"
-            app:popUpTo="@id/loggedOutFragment"
-            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_loginFragment_to_activeFragment"
             app:destination="@id/activeFragment"
@@ -47,23 +34,12 @@
         android:name="com.example.tbc_course_6.authorizationFragment.RegisterEndFragment"
         android:label="fragment_register_end"
         tools:layout="@layout/fragment_register_end" >
-        <action
-            android:id="@+id/action_registerEndFragment_to_loggedOutFragment"
-            app:destination="@id/loggedOutFragment"
-            app:popUpTo="@id/loggedOutFragment"
-            app:popUpToInclusive="true" />
         <argument
             android:name="email"
             app:argType="string" />
         <argument
             android:name="password"
             app:argType="string" />
-        <action
-            android:id="@+id/action_registerEndFragment_to_registerFragment"
-            app:destination="@id/registerFragment"
-            app:enterAnim="@anim/from_right_to_left"
-            app:popUpTo="@id/registerFragment"
-            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_registerEndFragment_to_activeFragment"
             app:destination="@id/activeFragment"
@@ -89,9 +65,7 @@
             app:popEnterAnim="@anim/from_top" />
         <action
             android:id="@+id/action_loggedOutFragment_to_activeFragment"
-            app:destination="@id/activeFragment"
-            app:popUpTo="@id/activeFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/activeFragment" />
     </fragment>
     <fragment
         android:id="@+id/activeFragment"
